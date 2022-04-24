@@ -1,0 +1,30 @@
+### Создание игры
+POST http://localhost:8080/game
+Content-Type: application/json
+
+{
+  "count": 300,
+  "min_difficulty": 0,
+  "max_difficulty": 1000
+}
+> {%
+  client.global.set("game_id", response.body.result.id)
+  %}
+
+### Получение первого вопроса
+GET http://localhost:8080/game/{{game_id}}/1
+Content-Type: application/json
+
+### Ответ на первый вопрос игры
+POST http://localhost:8080/game/{{game_id}}/1/check
+Content-Type: application/json
+
+{
+  "answer": "Ronald Reagan"
+}
+
+### Окончание игры
+POST http://localhost:8080/game/{{game_id}}/finish
+Content-Type: application/json
+
+{}

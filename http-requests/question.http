@@ -1,0 +1,20 @@
+### Поиск случайного вопроса
+GET http://localhost:8080/question/random
+
+### Ответ 1
+POST http://localhost:8080/question/check
+Content-Type: application/json
+
+{
+  "question_id": 53950,
+  "answer": "Пушкин"
+}
+
+### Ответ 2
+POST http://localhost:8080/question/check
+Content-Type: application/json
+
+{
+  "question_id": 6,
+  "answer": "Мадрид"
+}

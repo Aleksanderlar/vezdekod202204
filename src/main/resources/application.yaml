@@ -1,0 +1,25 @@
+spring:
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/vezdekod
+#    username: vezdekod
+#    password: vezdepass
+#    driver-class-name: org.postgresql.Driver
+#    hikari:
+#      connectionTimeout: 30000
+#      idleTimeout: 600000
+#      maxLifetime: 1800000
+
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: validate
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyComponentPathImpl

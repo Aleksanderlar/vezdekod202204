@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2022-04-23_15:06
+      author: larionov
+      changes:
+        - addForeignKeyConstraint:
+            baseTableName: question
+            referencedTableName: category
+            baseColumnNames: category_id
+            referencedColumnNames: id
+            constraintName: question_category_id

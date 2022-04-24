@@ -1,0 +1,36 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2022-04-23_15:06
+      author: larionov
+      changes:
+        - createTable:
+            tableName: question
+            columns:
+              - column:
+                  name: id
+                  autoIncrement: true
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: question_pkey
+              - column:
+                  name: question
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: answer
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: difficulty
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: category_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false

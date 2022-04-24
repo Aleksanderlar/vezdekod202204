@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2022-04-23_16:14
+      author: larionov
+      changes:
+        - loadData:
+            tableName: question
+            separator: '|'
+            file: db/changelog/changes/2022/04/2022-04-23_16:14/data.csv
